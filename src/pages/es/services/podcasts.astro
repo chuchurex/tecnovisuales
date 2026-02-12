@@ -1,5 +1,8 @@
 ---
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { heroVideos, videoUrl } from '../../../config/videos';
+
+const hero = heroVideos.podcasts;
 
 const features = [
   { title: "Producción Multicámara en Estudio", description: "Grabación profesional de podcasts con hasta 4 cámaras de cine, capturando cada ángulo y reacción con calidad broadcast." },
@@ -35,4 +38,6 @@ const faqs = [
   equipment={equipment}
   faqs={faqs}
   lang="es"
+  videoDesktop={videoUrl(hero.desktop)}
+  videoPoster={videoUrl(hero.poster)}
 />

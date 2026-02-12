@@ -4,6 +4,9 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import Button from '../../components/ui/Button.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
+import { heroVideos, videoUrl } from '../../config/videos';
+
+const hero = heroVideos.portfolio;
 
 const projects = [
   {
@@ -81,7 +84,15 @@ const categories = ["Todos", "Video Corporativo", "Podcasts", "Eventos", "Redes 
   <main>
     <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-24">
       <div class="absolute inset-0 bg-brand-black">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black-light to-brand-black opacity-90"></div>
+        <video
+          class="absolute inset-0 w-full h-full object-cover"
+          autoplay muted loop playsinline
+          poster={videoUrl(hero.poster)}
+        >
+          <source src={videoUrl(hero.desktop)} type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-brand-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/40"></div>
         <div class="film-grain"></div>
       </div>
 

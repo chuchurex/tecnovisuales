@@ -1,5 +1,8 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { heroVideos, videoUrl } from '../../config/videos';
+
+const hero = heroVideos.social;
 
 const features = [
   {
@@ -83,5 +86,7 @@ const faqs = [
   process={process}
   equipment={equipment}
   faqs={faqs}
+  videoDesktop={videoUrl(hero.desktop)}
+  videoPoster={videoUrl(hero.poster)}
   lang="en"
 />

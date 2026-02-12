@@ -1,5 +1,8 @@
 ---
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { heroVideos, videoUrl } from '../../../config/videos';
+
+const hero = heroVideos.events;
 
 const features = [
   { title: "Cobertura Multicámara en Vivo", description: "Hasta 6 cámaras estratégicamente posicionadas para capturar cada momento, speaker y reacción del público con precisión cinematográfica." },
@@ -35,4 +38,6 @@ const faqs = [
   equipment={equipment}
   faqs={faqs}
   lang="es"
+  videoDesktop={videoUrl(hero.desktop)}
+  videoPoster={videoUrl(hero.poster)}
 />

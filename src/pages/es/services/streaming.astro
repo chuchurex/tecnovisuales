@@ -1,5 +1,8 @@
 ---
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { heroVideos, videoUrl } from '../../../config/videos';
+
+const hero = heroVideos.streaming;
 
 const features = [
   { title: "Calidad de Broadcast", description: "Streaming profesional con cámaras de calidad de cine, iluminación adecuada y encoding de estándar broadcast para una experiencia de viewer impecable." },
@@ -35,4 +38,6 @@ const faqs = [
   equipment={equipment}
   faqs={faqs}
   lang="es"
+  videoDesktop={videoUrl(hero.desktop)}
+  videoPoster={videoUrl(hero.poster)}
 />

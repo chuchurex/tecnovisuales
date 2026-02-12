@@ -1,5 +1,8 @@
 ---
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { heroVideos, videoUrl } from '../../../config/videos';
+
+const hero = heroVideos.social;
 
 const features = [
   { title: "Reels y Contenido Short-Form", description: "Videos verticales que detienen el scroll, optimizados para Instagram Reels, TikTok y YouTube Shorts con formatos y hooks de tendencia." },
@@ -35,4 +38,6 @@ const faqs = [
   equipment={equipment}
   faqs={faqs}
   lang="es"
+  videoDesktop={videoUrl(hero.desktop)}
+  videoPoster={videoUrl(hero.poster)}
 />

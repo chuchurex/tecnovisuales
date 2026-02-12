@@ -4,6 +4,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Button from '../components/ui/Button.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
+import { videoUrl } from '../config/videos';
 
 interface Feature {
   title: string;
@@ -31,6 +32,8 @@ interface Props {
   equipment?: string[];
   faqs: FAQ[];
   lang?: 'en' | 'es';
+  videoDesktop?: string;
+  videoPoster?: string;
 }
 
 const {
@@ -42,7 +45,9 @@ const {
   process,
   equipment = [],
   faqs,
-  lang = 'en'
+  lang = 'en',
+  videoDesktop,
+  videoPoster,
 } = Astro.props;
 
 const contactHref = lang === 'es' ? '/es/contact' : '/contact';
@@ -64,7 +69,17 @@ const faqTitle = lang === 'es' ? 'Preguntas Frecuentes' : 'Frequently Asked Ques
     <!-- Hero Section -->
     <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-24">
       <div class="absolute inset-0 bg-brand-black">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black-light to-brand-black opacity-90"></div>
+        {videoDesktop && (
+          <video
+            class="absolute inset-0 w-full h-full object-cover"
+            autoplay muted loop playsinline
+            poster={videoPoster || undefined}
+          >
+            <source src={videoDesktop} type="video/mp4" />
+          </video>
+        )}
+        <div class="absolute inset-0 bg-brand-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/40"></div>
         <div class="film-grain"></div>
       </div>
 

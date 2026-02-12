@@ -3,8 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { useTranslations } from '../../i18n/ui';
+import { heroVideos, videoUrl } from '../../config/videos';
 
 const t = useTranslations('es');
+const hero = heroVideos.home;
 ---
 
 <Layout title="Producción Cinematográfica. Visión Global." description="Productora cinematográfica premium en Santiago, Chile. Videos corporativos, podcasts, eventos, streaming y tours 3D inmobiliarios.">
@@ -13,9 +15,18 @@ const t = useTranslations('es');
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background Gradient (placeholder for video) -->
-      <div class="absolute inset-0 bg-gradient-to-br from-[--color-brand-black] via-[--color-brand-black-light] to-[--color-brand-black]">
-        <div class="absolute inset-0 bg-gradient-to-t from-[--color-brand-black] via-transparent to-transparent"></div>
+      <!-- Video Background -->
+      <div class="absolute inset-0 bg-[--color-brand-black]">
+        <video
+          class="absolute inset-0 w-full h-full object-cover"
+          autoplay muted loop playsinline
+          poster={videoUrl(hero.poster)}
+        >
+          <source src={videoUrl(hero.desktop)} type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-[--color-brand-black]/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[--color-brand-black] via-transparent to-[--color-brand-black]/40"></div>
+        <div class="film-grain"></div>
       </div>
 
       <!-- Content -->
