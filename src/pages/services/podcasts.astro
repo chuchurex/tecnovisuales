@@ -1,0 +1,87 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const features = [
+  {
+    title: "Multi-Camera Studio Production",
+    description: "Professional podcast recording with up to 4 cinema-grade cameras, capturing every angle and reaction with broadcast quality."
+  },
+  {
+    title: "Studio Lighting & Set Design",
+    description: "Custom lighting setups and branded set designs that give your podcast a distinctive, premium visual identity."
+  },
+  {
+    title: "Broadcast-Quality Audio",
+    description: "Professional microphones, acoustic treatment, and audio engineering for crystal-clear sound that rivals major networks."
+  },
+  {
+    title: "Full Post-Production",
+    description: "Complete editing, color grading, sound mixing, and graphics packages ready for YouTube, Spotify, and all major platforms."
+  }
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Setup & Branding",
+    description: "We design your podcast's visual identity, set design, and technical setup tailored to your brand."
+  },
+  {
+    number: "02",
+    title: "Recording Session",
+    description: "Arrive at our studio ready to record. We handle all technical aspects so you can focus on content."
+  },
+  {
+    number: "03",
+    title: "Post-Production",
+    description: "Professional editing, color grading, audio mixing, and branded graphics for each episode."
+  },
+  {
+    number: "04",
+    title: "Delivery",
+    description: "Optimized exports for all platforms: full episodes, clips for social media, and audio-only versions."
+  }
+];
+
+const equipment = [
+  "Sony FX6 Cameras",
+  "Blackmagic 6K Pro",
+  "Shure SM7B Microphones",
+  "Rode Wireless Systems",
+  "ATEM Mini Pro Switcher",
+  "Aputure Lighting",
+  "Acoustic Treatment",
+  "Teleprompter Systems"
+];
+
+const faqs = [
+  {
+    question: "Do I need to bring my own equipment?",
+    answer: "No, we provide everything. Just bring yourself and your guests. Our studio is fully equipped with professional cameras, microphones, lighting, and monitoring systems."
+  },
+  {
+    question: "Can you help us launch a podcast from scratch?",
+    answer: "Absolutely. We offer full podcast launch packages including concept development, branding, set design, pilot episode production, and ongoing production support."
+  },
+  {
+    question: "What's included in each episode package?",
+    answer: "Each episode includes: multi-camera recording, professional editing, color grading, audio mixing, intro/outro graphics, thumbnail design, and exports optimized for YouTube, Spotify, Apple Podcasts, and social media clips."
+  },
+  {
+    question: "Can you record at our location instead?",
+    answer: "Yes, we offer mobile podcast production. We bring all necessary equipment to your office or preferred location, maintaining the same production quality as our studio."
+  }
+];
+---
+
+<ServiceLayout
+  title="Podcasts & Interviews"
+  tagline="Multi-Camera Studio Production"
+  description="Professional podcast production in Santiago, Chile. Multi-camera studio recording with cinema-grade equipment and full post-production services."
+  heroSubtitle="Professional podcast recording with cinema-grade cameras, studio lighting, and broadcast-quality audio. From recording to final edit, we handle everything."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="en"
+/>

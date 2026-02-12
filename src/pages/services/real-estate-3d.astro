@@ -1,0 +1,87 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const features = [
+  {
+    title: "Matterport 3D Tours",
+    description: "Immersive virtual walkthroughs that let potential buyers explore properties remotely with photorealistic detail and measurements."
+  },
+  {
+    title: "Aerial Drone Footage",
+    description: "Cinematic aerial videos and photography showcasing properties, surroundings, amenities, and neighborhood context."
+  },
+  {
+    title: "360° Photography",
+    description: "High-resolution spherical photography for websites and VR platforms, offering complete visual access to every space."
+  },
+  {
+    title: "Cinematic Property Videos",
+    description: "Hollywood-style property films with professional lighting, stabilized movement, and emotional storytelling."
+  }
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Site Assessment",
+    description: "Property visit to plan the shoot, identify key features, and determine optimal capture strategy."
+  },
+  {
+    number: "02",
+    title: "Capture Day",
+    description: "Comprehensive documentation: Matterport scanning, 360° photography, drone flights, and video production."
+  },
+  {
+    number: "03",
+    title: "Processing",
+    description: "3D model creation, video editing, color grading, and optimization for all delivery platforms."
+  },
+  {
+    number: "04",
+    title: "Delivery",
+    description: "Hosted Matterport tours, downloadable videos, web-optimized images, and integration support."
+  }
+];
+
+const equipment = [
+  "Matterport Pro3",
+  "DJI Mavic 3 Pro",
+  "DJI Inspire 2",
+  "Insta360 Pro 2",
+  "Sony A7R V",
+  "DJI RS3 Pro Gimbal",
+  "Professional Lighting",
+  "Wide-Angle Lenses"
+];
+
+const faqs = [
+  {
+    question: "How long does it take to create a Matterport tour?",
+    answer: "Scanning typically takes 2-4 hours depending on property size. Processing and delivery usually takes 2-3 business days. Rush delivery is available for time-sensitive listings."
+  },
+  {
+    question: "Can the 3D tours be embedded on our website?",
+    answer: "Yes, Matterport tours can be easily embedded on any website, shared via direct links, or integrated with real estate platforms like Portal Inmobiliario, Zillow, and MLS systems."
+  },
+  {
+    question: "Do you need the property to be empty for filming?",
+    answer: "Not necessarily. We can work with furnished properties and even occupied spaces. For the best results, we recommend a clean, staged environment. We can advise on preparation before the shoot."
+  },
+  {
+    question: "What areas do you cover for real estate shoots?",
+    answer: "We serve the entire Santiago metropolitan area and can travel throughout Chile for larger projects. International projects are also possible with advance coordination."
+  }
+];
+---
+
+<ServiceLayout
+  title="3D Real Estate"
+  tagline="Immersive Virtual Tours & 360°"
+  description="Professional real estate video and 3D tour production in Santiago, Chile. Matterport scans, drone footage, and cinematic property videos."
+  heroSubtitle="Matterport scans, 3D walkthroughs, drone footage, and cinematic property videos that help real estate developers sell faster."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="en"
+/>

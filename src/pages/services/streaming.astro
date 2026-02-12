@@ -1,0 +1,87 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const features = [
+  {
+    title: "Broadcast-Grade Quality",
+    description: "Professional streaming with cinema-quality cameras, proper lighting, and broadcast-standard encoding for flawless viewer experience."
+  },
+  {
+    title: "Multi-Platform Streaming",
+    description: "Simultaneous streaming to YouTube, LinkedIn, Zoom, Teams, and custom platforms with dedicated monitoring for each."
+  },
+  {
+    title: "Interactive Features",
+    description: "Live Q&A integration, real-time graphics, lower thirds, audience polls, and seamless presenter switching."
+  },
+  {
+    title: "Hybrid Event Support",
+    description: "Complete technical production for events with both in-person and remote audiences, ensuring seamless integration."
+  }
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Technical Planning",
+    description: "Internet assessment, platform setup, graphics design, and run-of-show coordination with your team."
+  },
+  {
+    number: "02",
+    title: "Setup & Testing",
+    description: "Equipment installation, network configuration, and comprehensive rehearsal with all presenters."
+  },
+  {
+    number: "03",
+    title: "Live Production",
+    description: "Professional direction with real-time switching, graphics insertion, and quality monitoring."
+  },
+  {
+    number: "04",
+    title: "Recording & Delivery",
+    description: "Full recording of the stream plus edited highlight version for post-event distribution."
+  }
+];
+
+const equipment = [
+  "PTZ Cameras",
+  "ATEM Mini Extreme",
+  "Blackmagic Web Presenter",
+  "Bonded Internet (4G/5G)",
+  "Wireless Presenter Systems",
+  "Graphics Workstation",
+  "Professional Monitoring",
+  "Backup Systems"
+];
+
+const faqs = [
+  {
+    question: "What internet speed do we need for live streaming?",
+    answer: "We recommend a minimum of 20 Mbps upload speed for reliable HD streaming. However, we always bring bonded cellular backup systems to ensure uninterrupted streaming regardless of venue internet reliability."
+  },
+  {
+    question: "Can you stream to our company's private platform?",
+    answer: "Yes, we support RTMP streaming to virtually any platform including private corporate streaming services, Vimeo, custom CDNs, and internal communication tools like Microsoft Teams or Zoom Webinars."
+  },
+  {
+    question: "Do you handle the graphics and lower thirds?",
+    answer: "Absolutely. We design custom graphics packages including lower thirds, title cards, transitions, and animated elements that match your brand guidelines. These are operated live during the stream."
+  },
+  {
+    question: "What happens if there's a technical issue during the stream?",
+    answer: "We build redundancy into every production: backup cameras, backup internet (bonded cellular), backup encoding systems, and backup power. Our team monitors all systems continuously and can switch to backups instantly if needed."
+  }
+];
+---
+
+<ServiceLayout
+  title="Live Streaming"
+  tagline="Professional Broadcast for Hybrid Events"
+  description="Professional live streaming services in Santiago, Chile. Broadcast-grade streaming for corporate events, webinars, and hybrid conferences."
+  heroSubtitle="Broadcast-grade live streaming for corporate events, product launches, webinars, and hybrid conferences with professional production quality."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="en"
+/>

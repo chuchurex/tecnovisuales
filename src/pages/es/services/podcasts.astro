@@ -1,0 +1,38 @@
+---
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+
+const features = [
+  { title: "Producción Multicámara en Estudio", description: "Grabación profesional de podcasts con hasta 4 cámaras de cine, capturando cada ángulo y reacción con calidad broadcast." },
+  { title: "Iluminación y Diseño de Set", description: "Configuraciones de iluminación personalizadas y diseños de set con tu marca que le dan a tu podcast una identidad visual distintiva y premium." },
+  { title: "Audio de Calidad Broadcast", description: "Micrófonos profesionales, tratamiento acústico e ingeniería de audio para un sonido cristalino que rivaliza con las grandes cadenas." },
+  { title: "Post-Producción Completa", description: "Edición completa, corrección de color, mezcla de audio y paquetes gráficos listos para YouTube, Spotify y todas las plataformas." }
+];
+
+const process = [
+  { number: "01", title: "Setup y Branding", description: "Diseñamos la identidad visual de tu podcast, el diseño del set y la configuración técnica a medida de tu marca." },
+  { number: "02", title: "Sesión de Grabación", description: "Llega a nuestro estudio listo para grabar. Nosotros manejamos todos los aspectos técnicos para que te concentres en el contenido." },
+  { number: "03", title: "Post-Producción", description: "Edición profesional, corrección de color, mezcla de audio y gráficos con tu marca para cada episodio." },
+  { number: "04", title: "Entrega", description: "Exportaciones optimizadas para todas las plataformas: episodios completos, clips para redes sociales y versiones solo audio." }
+];
+
+const equipment = ["Cámaras Sony FX6", "Blackmagic 6K Pro", "Micrófonos Shure SM7B", "Sistemas Rode Wireless", "ATEM Mini Pro Switcher", "Iluminación Aputure", "Tratamiento Acústico", "Sistemas de Teleprompter"];
+
+const faqs = [
+  { question: "¿Necesito llevar mi propio equipo?", answer: "No, nosotros proveemos todo. Solo tráete a ti y a tus invitados. Nuestro estudio está completamente equipado con cámaras, micrófonos, iluminación y sistemas de monitoreo profesionales." },
+  { question: "¿Pueden ayudarnos a lanzar un podcast desde cero?", answer: "Absolutamente. Ofrecemos paquetes completos de lanzamiento incluyendo desarrollo de concepto, branding, diseño de set, producción de episodio piloto y soporte continuo." },
+  { question: "¿Qué incluye cada paquete de episodio?", answer: "Cada episodio incluye: grabación multicámara, edición profesional, corrección de color, mezcla de audio, gráficos de intro/outro, diseño de thumbnail y exportaciones optimizadas para YouTube, Spotify, Apple Podcasts y clips para redes." },
+  { question: "¿Pueden grabar en nuestra ubicación?", answer: "Sí, ofrecemos producción de podcast móvil. Llevamos todo el equipo necesario a tu oficina o ubicación preferida, manteniendo la misma calidad que en nuestro estudio." }
+];
+---
+
+<ServiceLayout
+  title="Podcasts y Entrevistas"
+  tagline="Producción Multicámara en Estudio"
+  description="Producción profesional de podcasts en Santiago, Chile. Grabación multicámara con equipos de cine y servicios completos de post-producción."
+  heroSubtitle="Grabación profesional con cámaras de cine, iluminación de estudio y audio de calidad broadcast. Desde la grabación hasta la edición final, manejamos todo."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="es"
+/>

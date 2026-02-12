@@ -1,0 +1,87 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const features = [
+  {
+    title: "Reels & Short-Form Content",
+    description: "Scroll-stopping vertical videos optimized for Instagram Reels, TikTok, and YouTube Shorts with trending formats and hooks."
+  },
+  {
+    title: "LinkedIn Video Content",
+    description: "Professional thought leadership content, company updates, and executive videos designed for B2B engagement."
+  },
+  {
+    title: "Content Batching",
+    description: "Efficient production sessions that deliver a month's worth of content in a single shoot day, maximizing your investment."
+  },
+  {
+    title: "Platform Optimization",
+    description: "Each piece delivered in multiple formats and aspect ratios, optimized for every platform's unique requirements."
+  }
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Content Strategy",
+    description: "We analyze your brand, audience, and goals to develop a content calendar and visual strategy."
+  },
+  {
+    number: "02",
+    title: "Batch Production",
+    description: "Efficient shoot days where we capture multiple pieces of content with various setups and looks."
+  },
+  {
+    number: "03",
+    title: "Editing & Optimization",
+    description: "Fast-paced editing with captions, graphics, trending audio, and platform-specific optimization."
+  },
+  {
+    number: "04",
+    title: "Delivery & Scheduling",
+    description: "Organized delivery of all assets with posting recommendations and optimal timing strategies."
+  }
+];
+
+const equipment = [
+  "Sony A7S III",
+  "DJI RS3 Gimbal",
+  "Portable LED Panels",
+  "Wireless Microphones",
+  "iPhone 15 Pro (for native content)",
+  "Ring Lights",
+  "Green Screen Setup",
+  "CapCut / Premiere Pro"
+];
+
+const faqs = [
+  {
+    question: "How many pieces of content can we create in one shoot day?",
+    answer: "A typical batch shoot day produces 10-20 pieces of short-form content, depending on complexity. This includes multiple formats (vertical, square, horizontal) and variations for different platforms."
+  },
+  {
+    question: "Do you handle captions and text overlays?",
+    answer: "Yes, all our social media content includes professional captions, text overlays, and graphics. We can match your brand guidelines or develop a consistent visual style for your social presence."
+  },
+  {
+    question: "Can you create content that feels native to each platform?",
+    answer: "Absolutely. We understand the unique aesthetics and algorithms of each platform. We create content that feels native whether it's polished LinkedIn content or raw, trending-style TikTok videos."
+  },
+  {
+    question: "Do you offer ongoing monthly production?",
+    answer: "Yes, we offer monthly retainer packages for consistent content production. This includes regular shoot days, editing, and delivery on a schedule that fits your content calendar."
+  }
+];
+---
+
+<ServiceLayout
+  title="Social Media Content"
+  tagline="Scroll-Stopping Content for Brands"
+  description="Professional social media video production in Santiago, Chile. Reels, shorts, and branded content for LinkedIn, Instagram, and YouTube."
+  heroSubtitle="Reels, shorts, and branded content designed for LinkedIn, Instagram, and YouTube — produced with cinematic quality that stops the scroll."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="en"
+/>

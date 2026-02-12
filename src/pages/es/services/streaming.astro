@@ -1,0 +1,38 @@
+---
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+
+const features = [
+  { title: "Calidad de Broadcast", description: "Streaming profesional con cámaras de calidad de cine, iluminación adecuada y encoding de estándar broadcast para una experiencia de viewer impecable." },
+  { title: "Streaming Multi-Plataforma", description: "Transmisión simultánea a YouTube, LinkedIn, Zoom, Teams y plataformas personalizadas con monitoreo dedicado para cada una." },
+  { title: "Funciones Interactivas", description: "Integración de Q&A en vivo, gráficos en tiempo real, lower thirds, encuestas de audiencia y switching fluido de presentadores." },
+  { title: "Soporte para Eventos Híbridos", description: "Producción técnica completa para eventos con audiencias presenciales y remotas, asegurando integración perfecta." }
+];
+
+const process = [
+  { number: "01", title: "Planificación Técnica", description: "Evaluación de internet, configuración de plataforma, diseño de gráficos y coordinación del run-of-show con tu equipo." },
+  { number: "02", title: "Setup y Pruebas", description: "Instalación de equipos, configuración de red y ensayo completo con todos los presentadores." },
+  { number: "03", title: "Producción en Vivo", description: "Dirección profesional con switching en tiempo real, inserción de gráficos y monitoreo de calidad." },
+  { number: "04", title: "Grabación y Entrega", description: "Grabación completa del stream más versión highlight editada para distribución post-evento." }
+];
+
+const equipment = ["Cámaras PTZ", "ATEM Mini Extreme", "Blackmagic Web Presenter", "Internet Bonded (4G/5G)", "Sistemas Wireless para Presentadores", "Workstation de Gráficos", "Monitoreo Profesional", "Sistemas de Backup"];
+
+const faqs = [
+  { question: "¿Qué velocidad de internet necesitamos para streaming en vivo?", answer: "Recomendamos un mínimo de 20 Mbps de velocidad de subida para streaming HD confiable. Sin embargo, siempre traemos sistemas de backup celular bonded para asegurar transmisión ininterrumpida sin importar la confiabilidad del internet del venue." },
+  { question: "¿Pueden transmitir a la plataforma privada de nuestra empresa?", answer: "Sí, soportamos streaming RTMP a virtualmente cualquier plataforma incluyendo servicios de streaming corporativo privados, Vimeo, CDNs personalizados y herramientas de comunicación interna como Microsoft Teams o Zoom Webinars." },
+  { question: "¿Manejan los gráficos y lower thirds?", answer: "Absolutamente. Diseñamos paquetes de gráficos personalizados incluyendo lower thirds, title cards, transiciones y elementos animados que siguen tus lineamientos de marca. Estos se operan en vivo durante la transmisión." },
+  { question: "¿Qué pasa si hay un problema técnico durante el stream?", answer: "Construimos redundancia en cada producción: cámaras de backup, internet de backup (celular bonded), sistemas de encoding de backup y energía de backup. Nuestro equipo monitorea todos los sistemas continuamente y puede cambiar a backups instantáneamente si es necesario." }
+];
+---
+
+<ServiceLayout
+  title="Streaming en Vivo"
+  tagline="Transmisión Profesional para Eventos Híbridos"
+  description="Servicios profesionales de streaming en vivo en Santiago, Chile. Transmisión de calidad broadcast para eventos corporativos, webinars y conferencias híbridas."
+  heroSubtitle="Streaming de calidad broadcast para eventos corporativos, lanzamientos de producto, webinars y conferencias híbridas con calidad de producción profesional."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="es"
+/>

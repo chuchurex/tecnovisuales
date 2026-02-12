@@ -1,0 +1,38 @@
+---
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+
+const features = [
+  { title: "Cobertura Multicámara en Vivo", description: "Hasta 6 cámaras estratégicamente posicionadas para capturar cada momento, speaker y reacción del público con precisión cinematográfica." },
+  { title: "Resúmenes del Mismo Día", description: "Videos highlight de entrega rápida, editados y entregados el mismo día para compartir inmediatamente en redes sociales." },
+  { title: "Switching y Dirección en Vivo", description: "Dirección profesional en vivo con switching en tiempo real entre cámaras para una cobertura dinámica de calidad broadcast." },
+  { title: "Documentación Completa del Evento", description: "Cobertura integral incluyendo entrevistas, B-roll, tomas de ambiente y contenido behind-the-scenes." }
+];
+
+const process = [
+  { number: "01", title: "Planificación", description: "Visita al sitio, evaluación técnica, creación de shot list y coordinación con tu equipo de evento." },
+  { number: "02", title: "Setup", description: "Llegada anticipada para instalación de equipos, posicionamiento de cámaras, pruebas de audio y evaluación de iluminación." },
+  { number: "03", title: "Cobertura en Vivo", description: "Documentación completa del evento con múltiples cámaras, switching en vivo y monitoreo en tiempo real." },
+  { number: "04", title: "Entrega", description: "Highlights del mismo día más cobertura editada completa en 1-2 semanas, optimizada para todas las plataformas." }
+];
+
+const equipment = ["Cámaras Sony FX6 / FX3", "Sistemas Lavalier Wireless", "Micrófonos Shotgun", "ATEM Production Switcher", "Iluminación LED Portátil", "Transmisión de Video Wireless", "Estación de Edición On-Site", "Capacidad de Drone"];
+
+const faqs = [
+  { question: "¿Cuántas cámaras usan típicamente para eventos?", answer: "Típicamente desplegamos 3-6 cámaras dependiendo del tamaño y complejidad del evento. Esto incluye tomas amplias, close-ups del speaker, reacciones del público y cobertura móvil." },
+  { question: "¿Pueden integrarse con nuestro equipo de AV?", answer: "Absolutamente. Tenemos experiencia trabajando junto a equipos de AV internos, tomando feeds de cámaras y consolas de audio del venue e integrándolos sin problemas con las configuraciones existentes." },
+  { question: "¿También ofrecen streaming en vivo?", answer: "Sí, podemos combinar cobertura de eventos con streaming en vivo. Consulta nuestro servicio de Live Streaming para detalles, o podemos crear un paquete personalizado que incluya documentación y transmisión en vivo." },
+  { question: "¿Cuál es el tiempo de entrega del video final editado?", answer: "Los resúmenes highlight del mismo día (2-3 minutos) se entregan en horas. Las ediciones completas del evento típicamente toman 1-2 semanas dependiendo de la duración y complejidad de la post-producción." }
+];
+---
+
+<ServiceLayout
+  title="Eventos Corporativos"
+  tagline="Cobertura Multicámara en Vivo"
+  description="Producción profesional de video de eventos en Santiago, Chile. Cobertura multicámara, highlights del mismo día y post-producción completa."
+  heroSubtitle="Documentación completa de eventos con múltiples cámaras, edición profesional y resúmenes del mismo día que capturan cada momento importante."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="es"
+/>

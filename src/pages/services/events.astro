@@ -1,0 +1,87 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const features = [
+  {
+    title: "Multi-Camera Live Coverage",
+    description: "Up to 6 cameras strategically positioned to capture every moment, speaker, and audience reaction with cinematic precision."
+  },
+  {
+    title: "Same-Day Highlight Reels",
+    description: "Quick-turnaround highlight videos edited and delivered the same day for immediate sharing on social media."
+  },
+  {
+    title: "Live Switching & Direction",
+    description: "Professional live direction with real-time switching between cameras for dynamic, broadcast-quality coverage."
+  },
+  {
+    title: "Full Event Documentation",
+    description: "Comprehensive coverage including interviews, B-roll, atmosphere shots, and behind-the-scenes content."
+  }
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Planning",
+    description: "Site visit, technical assessment, shot list creation, and coordination with your event team."
+  },
+  {
+    number: "02",
+    title: "Setup",
+    description: "Early arrival for equipment setup, camera positioning, audio checks, and lighting assessment."
+  },
+  {
+    number: "03",
+    title: "Live Coverage",
+    description: "Full event documentation with multiple cameras, live switching, and real-time monitoring."
+  },
+  {
+    number: "04",
+    title: "Delivery",
+    description: "Same-day highlights plus full edited coverage within 1-2 weeks, optimized for all platforms."
+  }
+];
+
+const equipment = [
+  "Sony FX6 / FX3 Cameras",
+  "Wireless Lavalier Systems",
+  "Shotgun Microphones",
+  "ATEM Production Switcher",
+  "Portable LED Lighting",
+  "Wireless Video Transmission",
+  "On-Site Editing Station",
+  "Drone Capability"
+];
+
+const faqs = [
+  {
+    question: "How many cameras do you typically use for events?",
+    answer: "We typically deploy 3-6 cameras depending on the event size and complexity. This includes wide shots, speaker close-ups, audience reactions, and roaming coverage. We'll recommend the optimal setup based on your venue and program."
+  },
+  {
+    question: "Can you integrate with our AV team?",
+    answer: "Absolutely. We're experienced in working alongside in-house AV teams, taking feeds from house cameras and audio boards, and integrating seamlessly with existing production setups."
+  },
+  {
+    question: "Do you offer live streaming as well?",
+    answer: "Yes, we can combine event coverage with live streaming. See our Live Streaming service for details, or we can create a custom package that includes both documentation and live broadcast."
+  },
+  {
+    question: "What's the turnaround for the final edited video?",
+    answer: "Same-day highlight reels (2-3 minutes) are delivered within hours. Full event edits typically take 1-2 weeks depending on the event length and complexity of post-production required."
+  }
+];
+---
+
+<ServiceLayout
+  title="Corporate Events"
+  tagline="Live Multi-Camera Coverage"
+  description="Professional event video production in Santiago, Chile. Multi-camera coverage, same-day highlights, and full post-production for corporate events."
+  heroSubtitle="Full event documentation with multiple cameras, professional editing, and same-day highlight reels that capture every important moment."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="en"
+/>

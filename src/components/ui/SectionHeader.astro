@@ -1,0 +1,23 @@
+---
+interface Props {
+  subtitle?: string;
+  title: string;
+  align?: 'left' | 'center';
+  class?: string;
+}
+
+const { subtitle, title, align = 'left', class: className = '' } = Astro.props;
+
+const alignmentClasses = align === 'center' ? 'text-center mx-auto' : 'text-left';
+---
+
+<div class={`mb-12 md:mb-16 ${alignmentClasses} ${className} reveal-on-scroll`}>
+  {subtitle && (
+    <span class="block text-brand-gold text-sm font-medium uppercase tracking-[0.15em] mb-4">
+      {subtitle}
+    </span>
+  )}
+  <h2 class="font-display text-3xl md:text-5xl lg:text-6xl font-medium text-brand-cream leading-tight">
+    {title}
+  </h2>
+</div>

@@ -1,0 +1,38 @@
+---
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+
+const features = [
+  { title: "Reels y Contenido Short-Form", description: "Videos verticales que detienen el scroll, optimizados para Instagram Reels, TikTok y YouTube Shorts con formatos y hooks de tendencia." },
+  { title: "Contenido de Video para LinkedIn", description: "Contenido profesional de thought leadership, actualizaciones de empresa y videos ejecutivos diseñados para engagement B2B." },
+  { title: "Batching de Contenido", description: "Sesiones de producción eficientes que entregan contenido de un mes en un solo día de rodaje, maximizando tu inversión." },
+  { title: "Optimización por Plataforma", description: "Cada pieza entregada en múltiples formatos y aspect ratios, optimizada para los requisitos únicos de cada plataforma." }
+];
+
+const process = [
+  { number: "01", title: "Estrategia de Contenido", description: "Analizamos tu marca, audiencia y objetivos para desarrollar un calendario de contenido y estrategia visual." },
+  { number: "02", title: "Producción en Batch", description: "Días de rodaje eficientes donde capturamos múltiples piezas de contenido con varias configuraciones y looks." },
+  { number: "03", title: "Edición y Optimización", description: "Edición de ritmo rápido con subtítulos, gráficos, audio de tendencia y optimización específica por plataforma." },
+  { number: "04", title: "Entrega y Programación", description: "Entrega organizada de todos los assets con recomendaciones de publicación y estrategias de timing óptimo." }
+];
+
+const equipment = ["Sony A7S III", "DJI RS3 Gimbal", "Paneles LED Portátiles", "Micrófonos Wireless", "iPhone 15 Pro (contenido nativo)", "Ring Lights", "Setup de Green Screen", "CapCut / Premiere Pro"];
+
+const faqs = [
+  { question: "¿Cuántas piezas de contenido podemos crear en un día de rodaje?", answer: "Un día típico de batch shooting produce 10-20 piezas de contenido short-form, dependiendo de la complejidad. Esto incluye múltiples formatos (vertical, cuadrado, horizontal) y variaciones para diferentes plataformas." },
+  { question: "¿Manejan subtítulos y textos overlay?", answer: "Sí, todo nuestro contenido de redes sociales incluye subtítulos profesionales, textos overlay y gráficos. Podemos seguir tus lineamientos de marca o desarrollar un estilo visual consistente para tu presencia social." },
+  { question: "¿Pueden crear contenido que se sienta nativo de cada plataforma?", answer: "Absolutamente. Entendemos las estéticas únicas y algoritmos de cada plataforma. Creamos contenido que se siente nativo ya sea contenido pulido de LinkedIn o videos raw estilo trending de TikTok." },
+  { question: "¿Ofrecen producción mensual continua?", answer: "Sí, ofrecemos paquetes de retainer mensual para producción de contenido consistente. Esto incluye días de rodaje regulares, edición y entrega en un cronograma que se ajusta a tu calendario de contenido." }
+];
+---
+
+<ServiceLayout
+  title="Contenido para Redes"
+  tagline="Contenido que Detiene el Scroll"
+  description="Producción profesional de video para redes sociales en Santiago, Chile. Reels, shorts y contenido de marca para LinkedIn, Instagram y YouTube."
+  heroSubtitle="Reels, shorts y contenido de marca diseñado para LinkedIn, Instagram y YouTube — producido con calidad cinematográfica que detiene el scroll."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="es"
+/>

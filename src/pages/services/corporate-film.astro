@@ -1,0 +1,87 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const features = [
+  {
+    title: "Brand Films & Documentaries",
+    description: "Compelling brand stories that capture your company's essence, values, and vision with cinematic production quality."
+  },
+  {
+    title: "Institutional Videos",
+    description: "Professional corporate videos for internal communications, investor presentations, and stakeholder engagement."
+  },
+  {
+    title: "Product & Service Showcases",
+    description: "Visually stunning presentations of your products and services that drive engagement and conversions."
+  },
+  {
+    title: "Executive Interviews",
+    description: "Professionally produced leadership content that builds trust and humanizes your brand."
+  }
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "We dive deep into your brand, audience, and objectives to craft a strategic creative brief."
+  },
+  {
+    number: "02",
+    title: "Pre-Production",
+    description: "Scripting, storyboarding, location scouting, and meticulous planning for every frame."
+  },
+  {
+    number: "03",
+    title: "Production",
+    description: "Cinema-grade filming with professional crews, lighting, and cutting-edge equipment."
+  },
+  {
+    number: "04",
+    title: "Post-Production",
+    description: "Color grading, sound design, motion graphics, and final polish to perfection."
+  }
+];
+
+const equipment = [
+  "RED Komodo 6K",
+  "ARRI Alexa Mini",
+  "Blackmagic URSA",
+  "Cinema Lenses",
+  "DJI Ronin Stabilizers",
+  "Professional Lighting",
+  "DaVinci Resolve",
+  "Adobe Creative Suite"
+];
+
+const faqs = [
+  {
+    question: "What's the typical timeline for a corporate film?",
+    answer: "Most corporate films take 4-8 weeks from initial concept to final delivery. This includes 1-2 weeks of pre-production, 1-3 days of filming, and 2-4 weeks of post-production. Rush projects can be accommodated with advance notice."
+  },
+  {
+    question: "Do you handle scripting and creative direction?",
+    answer: "Absolutely. Our team includes experienced scriptwriters and creative directors who work closely with you to develop compelling narratives that align with your brand voice and objectives."
+  },
+  {
+    question: "What formats do you deliver?",
+    answer: "We deliver in multiple formats optimized for your needs: 4K masters, web-optimized versions, social media cuts, and broadcast-ready files. All projects include versions formatted for different platforms."
+  },
+  {
+    question: "Can you film at our facilities or on location?",
+    answer: "Yes, we're fully equipped for both studio and on-location shoots. We handle all logistics including location permits, equipment transport, and crew coordination anywhere in Chile or internationally."
+  }
+];
+---
+
+<ServiceLayout
+  title="Corporate Film"
+  tagline="Brand Stories with Cinematic Craft"
+  description="Premium corporate video production in Santiago, Chile. Brand films, documentaries, and institutional videos with Hollywood-level production quality."
+  heroSubtitle="We produce brand films, documentaries, and institutional videos that elevate your message with cinematic production quality that captivates audiences."
+  features={features}
+  process={process}
+  equipment={equipment}
+  faqs={faqs}
+  lang="en"
+/>

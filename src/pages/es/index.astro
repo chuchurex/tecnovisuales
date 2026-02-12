@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { useTranslations } from '../../i18n/ui';
+
+const t = useTranslations('es');
+---
+
+<Layout title="Producción Cinematográfica. Visión Global." description="Productora cinematográfica premium en Santiago, Chile. Videos corporativos, podcasts, eventos, streaming y tours 3D inmobiliarios.">
+  <Nav />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Gradient (placeholder for video) -->
+      <div class="absolute inset-0 bg-gradient-to-br from-[--color-brand-black] via-[--color-brand-black-light] to-[--color-brand-black]">
+        <div class="absolute inset-0 bg-gradient-to-t from-[--color-brand-black] via-transparent to-transparent"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container relative z-10 text-center pt-20">
+        <div class="max-w-4xl mx-auto">
+          <div class="accent-line mx-auto mb-8"></div>
+          <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-medium text-[--color-brand-cream] mb-6 leading-tight">
+            {t('hero.title')}
+          </h1>
+          <p class="text-lg md:text-xl text-[--color-brand-gray-light] max-w-2xl mx-auto mb-10">
+            {t('hero.subtitle')}
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/es/portfolio" class="btn btn-primary">
+              {t('hero.cta.work')}
+            </a>
+            <a href="/es/contact" class="btn btn-outline">
+              {t('hero.cta.project')}
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg class="w-6 h-6 text-[--color-brand-gray]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section bg-[--color-brand-black-light]">
+      <div class="container">
+        <div class="text-center mb-16">
+          <div class="accent-line mx-auto mb-6"></div>
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-[--color-brand-cream] mb-4">
+            {t('services.title')}
+          </h2>
+          <p class="text-[--color-brand-gray-light] max-w-2xl mx-auto">
+            {t('services.subtitle')}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/es/services/corporate-film" class="group block p-8 bg-[--color-brand-black] border border-[--color-brand-gray-dark]/30 hover:border-[--color-brand-gold]/50 transition-all duration-300">
+            <span class="font-display text-4xl text-[--color-brand-gold] opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+            <h3 class="font-display text-xl md:text-2xl text-[--color-brand-cream] mt-4 mb-2 group-hover:text-[--color-brand-gold] transition-colors">
+              {t('service.corporate.title')}
+            </h3>
+            <p class="text-sm text-[--color-brand-gray] mb-4">{t('service.corporate.tagline')}</p>
+            <p class="text-sm text-[--color-brand-gray-light] opacity-0 group-hover:opacity-100 transition-opacity">
+              {t('service.corporate.description')}
+            </p>
+          </a>
+
+          <a href="/es/services/podcasts" class="group block p-8 bg-[--color-brand-black] border border-[--color-brand-gray-dark]/30 hover:border-[--color-brand-gold]/50 transition-all duration-300">
+            <span class="font-display text-4xl text-[--color-brand-gold] opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+            <h3 class="font-display text-xl md:text-2xl text-[--color-brand-cream] mt-4 mb-2 group-hover:text-[--color-brand-gold] transition-colors">
+              {t('service.podcasts.title')}
+            </h3>
+            <p class="text-sm text-[--color-brand-gray] mb-4">{t('service.podcasts.tagline')}</p>
+            <p class="text-sm text-[--color-brand-gray-light] opacity-0 group-hover:opacity-100 transition-opacity">
+              {t('service.podcasts.description')}
+            </p>
+          </a>
+
+          <a href="/es/services/events" class="group block p-8 bg-[--color-brand-black] border border-[--color-brand-gray-dark]/30 hover:border-[--color-brand-gold]/50 transition-all duration-300">
+            <span class="font-display text-4xl text-[--color-brand-gold] opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+            <h3 class="font-display text-xl md:text-2xl text-[--color-brand-cream] mt-4 mb-2 group-hover:text-[--color-brand-gold] transition-colors">
+              {t('service.events.title')}
+            </h3>
+            <p class="text-sm text-[--color-brand-gray] mb-4">{t('service.events.tagline')}</p>
+            <p class="text-sm text-[--color-brand-gray-light] opacity-0 group-hover:opacity-100 transition-opacity">
+              {t('service.events.description')}
+            </p>
+          </a>
+
+          <a href="/es/services/social-media" class="group block p-8 bg-[--color-brand-black] border border-[--color-brand-gray-dark]/30 hover:border-[--color-brand-gold]/50 transition-all duration-300">
+            <span class="font-display text-4xl text-[--color-brand-gold] opacity-50 group-hover:opacity-100 transition-opacity">04</span>
+            <h3 class="font-display text-xl md:text-2xl text-[--color-brand-cream] mt-4 mb-2 group-hover:text-[--color-brand-gold] transition-colors">
+              {t('service.social.title')}
+            </h3>
+            <p class="text-sm text-[--color-brand-gray] mb-4">{t('service.social.tagline')}</p>
+            <p class="text-sm text-[--color-brand-gray-light] opacity-0 group-hover:opacity-100 transition-opacity">
+              {t('service.social.description')}
+            </p>
+          </a>
+
+          <a href="/es/services/streaming" class="group block p-8 bg-[--color-brand-black] border border-[--color-brand-gray-dark]/30 hover:border-[--color-brand-gold]/50 transition-all duration-300">
+            <span class="font-display text-4xl text-[--color-brand-gold] opacity-50 group-hover:opacity-100 transition-opacity">05</span>
+            <h3 class="font-display text-xl md:text-2xl text-[--color-brand-cream] mt-4 mb-2 group-hover:text-[--color-brand-gold] transition-colors">
+              {t('service.streaming.title')}
+            </h3>
+            <p class="text-sm text-[--color-brand-gray] mb-4">{t('service.streaming.tagline')}</p>
+            <p class="text-sm text-[--color-brand-gray-light] opacity-0 group-hover:opacity-100 transition-opacity">
+              {t('service.streaming.description')}
+            </p>
+          </a>
+
+          <a href="/es/services/real-estate-3d" class="group block p-8 bg-[--color-brand-black] border border-[--color-brand-gray-dark]/30 hover:border-[--color-brand-gold]/50 transition-all duration-300">
+            <span class="font-display text-4xl text-[--color-brand-gold] opacity-50 group-hover:opacity-100 transition-opacity">06</span>
+            <h3 class="font-display text-xl md:text-2xl text-[--color-brand-cream] mt-4 mb-2 group-hover:text-[--color-brand-gold] transition-colors">
+              {t('service.realestate.title')}
+            </h3>
+            <p class="text-sm text-[--color-brand-gray] mb-4">{t('service.realestate.tagline')}</p>
+            <p class="text-sm text-[--color-brand-gray-light] opacity-0 group-hover:opacity-100 transition-opacity">
+              {t('service.realestate.description')}
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-[--color-brand-black]">
+      <div class="container">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div class="text-center">
+            <span class="block font-display text-5xl md:text-6xl lg:text-7xl text-[--color-brand-gold]">15+</span>
+            <span class="block text-lg font-display text-[--color-brand-cream] mt-2">{t('stats.years')}</span>
+            <span class="block text-sm text-[--color-brand-gray] mt-1">{t('stats.years.label')}</span>
+          </div>
+          <div class="text-center">
+            <span class="block font-display text-5xl md:text-6xl lg:text-7xl text-[--color-brand-gold]">200+</span>
+            <span class="block text-lg font-display text-[--color-brand-cream] mt-2">{t('stats.projects')}</span>
+            <span class="block text-sm text-[--color-brand-gray] mt-1">{t('stats.projects.label')}</span>
+          </div>
+          <div class="text-center">
+            <span class="block font-display text-5xl md:text-6xl lg:text-7xl text-[--color-brand-gold]">8</span>
+            <span class="block text-lg font-display text-[--color-brand-cream] mt-2">{t('stats.countries')}</span>
+            <span class="block text-sm text-[--color-brand-gray] mt-1">{t('stats.countries.label')}</span>
+          </div>
+          <div class="text-center">
+            <span class="block font-display text-5xl md:text-6xl lg:text-7xl text-[--color-brand-gold]">50+</span>
+            <span class="block text-lg font-display text-[--color-brand-cream] mt-2">{t('stats.clients')}</span>
+            <span class="block text-sm text-[--color-brand-gray] mt-1">{t('stats.clients.label')}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section bg-[--color-brand-black-light]">
+      <div class="container">
+        <div class="text-center mb-16">
+          <div class="accent-line mx-auto mb-6"></div>
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-[--color-brand-cream] mb-4">
+            {t('process.title')}
+          </h2>
+          <p class="text-[--color-brand-gray-light] max-w-2xl mx-auto">
+            {t('process.subtitle')}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div class="relative">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="flex items-center justify-center w-12 h-12 border-2 border-[--color-brand-gold] text-[--color-brand-gold] font-display text-xl">1</span>
+              <div class="hidden md:block flex-1 h-px bg-[--color-brand-gray-dark]"></div>
+            </div>
+            <h3 class="font-display text-2xl text-[--color-brand-cream] mb-4">{t('process.pre.title')}</h3>
+            <p class="text-[--color-brand-gray-light]">{t('process.pre.description')}</p>
+          </div>
+
+          <div class="relative">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="flex items-center justify-center w-12 h-12 border-2 border-[--color-brand-gold] text-[--color-brand-gold] font-display text-xl">2</span>
+              <div class="hidden md:block flex-1 h-px bg-[--color-brand-gray-dark]"></div>
+            </div>
+            <h3 class="font-display text-2xl text-[--color-brand-cream] mb-4">{t('process.production.title')}</h3>
+            <p class="text-[--color-brand-gray-light]">{t('process.production.description')}</p>
+          </div>
+
+          <div class="relative">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="flex items-center justify-center w-12 h-12 border-2 border-[--color-brand-gold] text-[--color-brand-gold] font-display text-xl">3</span>
+            </div>
+            <h3 class="font-display text-2xl text-[--color-brand-cream] mb-4">{t('process.post.title')}</h3>
+            <p class="text-[--color-brand-gray-light]">{t('process.post.description')}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-[--color-brand-black]">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="accent-line mx-auto mb-8"></div>
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-[--color-brand-cream] mb-6">
+            {t('cta.title')}
+          </h2>
+          <p class="text-lg text-[--color-brand-gray-light] mb-10">
+            {t('cta.subtitle')}
+          </p>
+          <a href="/es/contact" class="btn btn-primary">
+            {t('cta.button')}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

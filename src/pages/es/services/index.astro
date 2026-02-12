@@ -1,0 +1,98 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import Button from '../../../components/ui/Button.astro';
+import ServiceCard from '../../../components/ui/ServiceCard.astro';
+import SectionHeader from '../../../components/ui/SectionHeader.astro';
+import { useTranslations } from '../../../i18n/ui';
+
+const t = useTranslations('es');
+
+const services = [
+  { number: "01", title: t('service.corporate.title'), tagline: t('service.corporate.tagline'), href: "/es/services/corporate-film" },
+  { number: "02", title: t('service.podcasts.title'), tagline: t('service.podcasts.tagline'), href: "/es/services/podcasts" },
+  { number: "03", title: t('service.events.title'), tagline: t('service.events.tagline'), href: "/es/services/events" },
+  { number: "04", title: t('service.social.title'), tagline: t('service.social.tagline'), href: "/es/services/social-media" },
+  { number: "05", title: t('service.streaming.title'), tagline: t('service.streaming.tagline'), href: "/es/services/streaming" },
+  { number: "06", title: t('service.realestate.title'), tagline: t('service.realestate.tagline'), href: "/es/services/real-estate-3d" }
+];
+---
+
+<Layout title="Servicios" description="Servicios de producción audiovisual premium en Santiago, Chile. Videos corporativos, podcasts, eventos, redes sociales, streaming e inmobiliario 3D.">
+  <Nav />
+
+  <main>
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24">
+      <div class="absolute inset-0 bg-brand-black">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black-light to-brand-black opacity-90"></div>
+        <div class="film-grain"></div>
+      </div>
+      <div class="container relative z-10 text-center py-20">
+        <div class="max-w-4xl mx-auto">
+          <span class="inline-block text-brand-gold text-sm font-medium uppercase tracking-[0.2em] mb-6 reveal-on-scroll">Lo Que Creamos</span>
+          <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-medium text-brand-cream mb-8 leading-tight reveal-on-scroll">Nuestros Servicios</h1>
+          <p class="text-lg md:text-xl text-brand-gray-light max-w-2xl mx-auto font-light reveal-on-scroll">Desde videos corporativos hasta experiencias 3D inmersivas — llevamos todo el poder del cine a cada proyecto.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-brand-black">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service) => (
+            <ServiceCard number={service.number} title={service.title} tagline={service.tagline} href={service.href} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-brand-black-light border-y border-brand-gray-dark/20">
+      <div class="container">
+        <SectionHeader title="Por Qué Tecnovisuales" subtitle="Nuestra Diferencia" align="center" class="max-w-3xl" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="text-center reveal-on-scroll">
+            <div class="w-16 h-16 mx-auto mb-6 border border-brand-gold flex items-center justify-center">
+              <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 class="font-display text-xl text-brand-cream mb-3">Calidad Cinematográfica</h3>
+            <p class="text-brand-gray font-light">Producción de nivel Hollywood con cámaras de cine, iluminación profesional y post-producción experta.</p>
+          </div>
+          <div class="text-center reveal-on-scroll">
+            <div class="w-16 h-16 mx-auto mb-6 border border-brand-gold flex items-center justify-center">
+              <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="font-display text-xl text-brand-cream mb-3">Experiencia Global</h3>
+            <p class="text-brand-gray font-light">15+ años de experiencia internacional en producción en 8 países y diversas industrias.</p>
+          </div>
+          <div class="text-center reveal-on-scroll">
+            <div class="w-16 h-16 mx-auto mb-6 border border-brand-gold flex items-center justify-center">
+              <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+            </div>
+            <h3 class="font-display text-xl text-brand-cream mb-3">Servicio Integral</h3>
+            <p class="text-brand-gray font-light">Un solo partner para todas tus necesidades audiovisuales — desde el concepto hasta la entrega en los 6 servicios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-brand-black text-center">
+      <div class="container">
+        <div class="max-w-3xl mx-auto">
+          <SectionHeader title="¿Listo para Comenzar?" subtitle="Hablemos" align="center" />
+          <p class="text-xl text-brand-gray-light font-light mb-12">Cuéntanos sobre tu proyecto y te ayudaremos a elegir los servicios correctos para tus objetivos.</p>
+          <Button href="/es/contact" variant="primary">Contáctanos</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+</script>

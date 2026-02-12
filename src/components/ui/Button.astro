@@ -1,0 +1,41 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'outline' | 'ghost';
+  class?: string;
+  target?: string;
+  type?: 'button' | 'submit' | 'reset';
+  'aria-label'?: string;
+}
+
+const { 
+  href, 
+  variant = 'primary', 
+  class: className = '', 
+  target,
+  type = 'button',
+  'aria-label': ariaLabel
+} = Astro.props;
+
+const baseStyles = "inline-flex items-center justify-center px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
+
+const variants = {
+  primary: "bg-brand-gold text-brand-black border border-brand-gold hover:bg-brand-gold-light hover:border-brand-gold-light",
+  outline: "bg-transparent border border-brand-gray-dark text-brand-cream hover:border-brand-gold hover:text-brand-gold",
+  ghost: "bg-transparent text-brand-cream hover:text-brand-gold"
+};
+
+const styles = `${baseStyles} ${variants[variant]} ${className}`;
+---
+
+{
+  href ? (
+    <a href={href} class={styles} target={target} aria-label={ariaLabel}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type} class={styles} aria-label={ariaLabel}>
+      <slot />
+    </button>
+  )
+}

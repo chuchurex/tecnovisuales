@@ -1,0 +1,161 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import Button from '../../components/ui/Button.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import { useTranslations } from '../../i18n/ui';
+
+const t = useTranslations('es');
+
+const services = [
+  "Video Corporativo",
+  "Podcasts y Entrevistas",
+  "Eventos Corporativos",
+  "Contenido para Redes",
+  "Streaming en Vivo",
+  "Inmobiliario 3D",
+  "Otro"
+];
+
+const budgetRanges = [
+  "Menos de $1M CLP",
+  "$1M - $3M CLP",
+  "$3M - $5M CLP",
+  "$5M - $10M CLP",
+  "$10M+ CLP",
+  "Aún no lo sé"
+];
+---
+
+<Layout title="Contacto" description="Ponte en contacto con Tecnovisuales. Cuéntanos sobre tu proyecto y te responderemos en 24 horas.">
+  <Nav />
+
+  <main>
+    <section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-24">
+      <div class="absolute inset-0 bg-brand-black">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black-light to-brand-black opacity-90"></div>
+        <div class="film-grain"></div>
+      </div>
+      <div class="container relative z-10 text-center py-16">
+        <div class="max-w-4xl mx-auto">
+          <span class="inline-block text-brand-gold text-sm font-medium uppercase tracking-[0.2em] mb-6 reveal-on-scroll">Contáctanos</span>
+          <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-medium text-brand-cream mb-8 leading-tight reveal-on-scroll">{t('contact.title')}</h1>
+          <p class="text-lg md:text-xl text-brand-gray-light max-w-2xl mx-auto font-light reveal-on-scroll">{t('contact.subtitle')}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-brand-black">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div class="lg:col-span-7 reveal-on-scroll">
+            <form class="space-y-8" id="contact-form">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label for="name" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.name')} <span class="text-brand-gold">*</span></label>
+                  <input type="text" id="name" name="name" required class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors placeholder:text-brand-gray-dark" placeholder="Juan Pérez" />
+                </div>
+                <div>
+                  <label for="email" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.email')} <span class="text-brand-gold">*</span></label>
+                  <input type="email" id="email" name="email" required class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors placeholder:text-brand-gray-dark" placeholder="juan@empresa.com" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label for="company" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.company')}</label>
+                  <input type="text" id="company" name="company" class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors placeholder:text-brand-gray-dark" placeholder="Nombre de la Empresa" />
+                </div>
+                <div>
+                  <label for="phone" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.phone')}</label>
+                  <input type="tel" id="phone" name="phone" class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors placeholder:text-brand-gray-dark" placeholder="+56 9 1234 5678" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label for="service" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.service')}</label>
+                  <select id="service" name="service" class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors appearance-none cursor-pointer">
+                    <option value="" class="bg-brand-black">Selecciona un servicio</option>
+                    {services.map(service => (<option value={service} class="bg-brand-black">{service}</option>))}
+                  </select>
+                </div>
+                <div>
+                  <label for="budget" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.budget')}</label>
+                  <select id="budget" name="budget" class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors appearance-none cursor-pointer">
+                    <option value="" class="bg-brand-black">Selecciona un rango</option>
+                    {budgetRanges.map(range => (<option value={range} class="bg-brand-black">{range}</option>))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-brand-cream text-sm font-medium uppercase tracking-widest mb-3">{t('contact.form.message')} <span class="text-brand-gold">*</span></label>
+                <textarea id="message" name="message" required rows="5" class="w-full bg-transparent border-b border-brand-gray-dark text-brand-cream py-3 focus:border-brand-gold focus:outline-none transition-colors resize-none placeholder:text-brand-gray-dark" placeholder="Cuéntanos sobre tu proyecto, objetivos, timeline y cualquier otro detalle que nos ayude a entender tu visión..."></textarea>
+              </div>
+
+              <div>
+                <Button type="submit" variant="primary" class="w-full md:w-auto">{t('contact.form.submit')}</Button>
+              </div>
+            </form>
+          </div>
+
+          <div class="lg:col-span-5 reveal-on-scroll">
+            <div class="bg-brand-black-light border border-brand-gray-dark/20 p-8 md:p-12 h-full">
+              <h2 class="font-display text-2xl text-brand-cream mb-8">Información de Contacto</h2>
+              <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-brand-gold flex-shrink-0">
+                    <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <div><h3 class="text-brand-cream font-medium mb-1">Ubicación</h3><p class="text-brand-gray font-light">Santiago, Chile</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-brand-gold flex-shrink-0">
+                    <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                  <div><h3 class="text-brand-cream font-medium mb-1">Email</h3><a href="mailto:info@tecnovisuales.com" class="text-brand-gray font-light hover:text-brand-gold transition-colors">info@tecnovisuales.com</a></div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-brand-gold flex-shrink-0">
+                    <svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  </div>
+                  <div><h3 class="text-brand-cream font-medium mb-1">WhatsApp</h3><a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="text-brand-gray font-light hover:text-brand-gold transition-colors">+56 9 1234 5678</a></div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-brand-gold flex-shrink-0">
+                    <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </div>
+                  <div><h3 class="text-brand-cream font-medium mb-1">Tiempo de Respuesta</h3><p class="text-brand-gray font-light">Menos de 24 horas</p></div>
+                </div>
+              </div>
+              <div class="w-full h-px bg-brand-gray-dark/30 my-8"></div>
+              <div>
+                <p class="text-brand-gray-light text-sm mb-4">¿Prefieres chatear? Envíanos un mensaje directo:</p>
+                <a href="https://wa.me/56912345678?text=Hola%20Tecnovisuales!%20Estoy%20interesado%20en%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 bg-[#25D366] text-white text-sm font-medium hover:bg-[#20bd5a] transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Mensaje por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+  const form = document.getElementById('contact-form');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('¡Gracias por tu mensaje! Te responderemos en menos de 24 horas.');
+  });
+</script>
